@@ -1,0 +1,51 @@
+.bg-2x-or-3x(@url2x, @url3x){
+  @media (-webkit-device-pixel-ratio: 2), (device-pixel-ratio: 2){
+    background-image: url(@url2x);
+  }
+  @media (-webkit-device-pixel-ratio: 3), (device-pixel-ratio: 3){
+    background-image: url(@url3x);
+  }
+}
+// 布局
+html, body, #app{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // height: 120%;
+  // overflow: scroll;
+}
+#app {
+  font-family: PingFang SC, Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  font-style: normal;
+  font-weight: normal;
+}
+.flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.align-start{
+  align-items: flex-start;
+}
+.jus-start{
+  justify-content: flex-start;
+}
+.space-between{
+  justify-content: space-between;
+}
+//.ellipsis{
+//  overflow: hidden;
+//  white-space: nowrap;
+//  text-overflow: ellipsis;
+//}
